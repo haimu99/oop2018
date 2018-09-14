@@ -5,6 +5,7 @@ public class Student {
 	private String name,id,group,email;
 	public void setName(String name){
 		this.name = name;
+	}
 	public String getName(){
 		return name;
 	}
@@ -20,7 +21,12 @@ public class Student {
 	public String getGroup(){
 		return group;
 	}
-	
+	public void setEmail(String email){
+		this.email = email;
+	}
+	public String getEmail(){
+		return email;
+	}
 	
     Student() {
         // TODO:
@@ -32,8 +38,12 @@ public class Student {
      * @param sid
      * @param em
      */
-    Student(String n, String sid, String em) {
+    public Student(String name, String id, String group, String email) {
         // TODO:
+    	this.name= name;
+    	this.id=id;
+    	this.group= group;
+    	this.email= email;
     }
 
     /**
@@ -44,8 +54,8 @@ public class Student {
         // TODO:
     }
 
-    String getInfo() {
-        // TODO:
-        return null; // xóa dòng này sau khi cài đặt
+    public void getInfo() {
+    	System.out.println("Ho va ten sinh vien " +getName()+"\n");
+    	System.out.println("Ma sinh vien " +getId());
     }
 }
