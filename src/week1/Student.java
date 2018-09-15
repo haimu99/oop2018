@@ -29,33 +29,29 @@ public class Student {
 	}
 	
     Student() {
-        // TODO:
+    	name= "Student";
+    	id="000";
+    	group="INT22041";
+    	email="uet@vnu.edu.vn";
     }
 
-    /**
-     * Constructor 2
-     * @param n
-     * @param sid
-     * @param em
-     */
-    public Student(String name, String id, String group, String email) {
-        // TODO:
-    	this.name= name;
-    	this.id=id;
-    	this.group= group;
-    	this.email= email;
+    public Student(String n, String sid,String em) {
+    	name=n;
+    	id=sid;
+    	email=em;
+    	group= "INT22041";
     }
-
-    /**
-     * Constructor 3
-     * @param s
-     */
     Student(Student s) {
-        // TODO:
+        name=s.name;
+        id=s.id;
+        group=s.group;
+        email=s.email;
     }
 
     public void getInfo() {
-    	System.out.println("Ho va ten sinh vien " +getName()+"\n");
-    	System.out.println("Ma sinh vien " +getId());
+    	System.out.println("Ho va ten sinh vien: " +getName()+"\n");
+    	System.out.println("Ma sinh vien: " +getId() +"\n");
+    	System.out.println("Lop: " + getGroup() + "\n");
+    	System.out.println("Email: " + getEmail() +"\n");
     }
 }
