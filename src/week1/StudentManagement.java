@@ -19,15 +19,18 @@ public class StudentManagement {
     }
 
     public static void main(String[] args) {
-        // TODO:
+        // TODO
+	//tao sinh vien thu nhat
     	Student s1=new Student();
     	s1.setName("Nguyen Minh Hai");
     	s1.setId("17020716");
     	s1.setGroup("INT22042");
     	s1.setEmail("haimu.99@gmail.com");
     	s1.getInfo();
+	//tao sinh vien thu 2 giong sv thu nhat
     	Student s2=new Student(s1);
     	s2.getInfo();
+	//tao sinh vien thu 3
     	Student s3=new Student();
     	s3.getInfo();
     	System.out.println("Sinh vien 1 và 2 cung lop? "+sameGroup (s1,s2));
