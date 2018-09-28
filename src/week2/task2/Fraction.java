@@ -48,14 +48,21 @@ public class Fraction {
         return thuong;
     }
     public void toigian(){
+        //tối giản phân số
         int a=gcd(this.numerator,this.denomianator);
         this.numerator=this.numerator/a;
         this.denomianator=this.denomianator/a;
     }
+    public boolean equals(Fraction other){
+       Fraction hieu=new Fraction(1,1);
+       hieu=this.subtract(other);
+       return (hieu.numerator/hieu.denomianator)>=0;
+    }
     public static void main(String[] args) {
-        Fraction a=new Fraction(5,12);
-        Fraction b=new Fraction(5,25);
+        Fraction a=new Fraction(5,13);
+        Fraction b=new Fraction(5,14);
         a = a.add(b);
         System.out.println(a.numerator+"/"+a.denomianator);
+        System.out.println(a.equals(b));
     }
 }
