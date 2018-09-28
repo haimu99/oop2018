@@ -1,11 +1,90 @@
 package week2.task3;
 
+import static java.lang.Math.abs;
+import static java.lang.Math.sqrt;
 import java.text.DecimalFormat;
+import static week2.task3.Footballer.moreGoal;
+import static week2.task3.Teacher.sameFaculty;
 
 public class Task3 {
+    public static void main(String[] args) {
+        
+        //lớp Giáo viên
+        Teacher t1=new Teacher("Le Khoi", "CNTT", "khoiln@vnu.edu.vn", 10000000, 18);
+        Teacher t2=new Teacher("Pham Huong", "DTVT", "phamhuong@vnu.edu.vn",9500000, 20);
+        t1.getInfo();
+        t2.getInfo();
+        System.out.println("Giao vien "+t1.getName()+" co thu nhap la: "+t1.earn()+"\n");
+        System.out.println("Giao vien "+t1.getName()+" va "+t2.getName()+" cung khoa khong? "+sameFaculty(t1, t2)+"\n");
+        
+        // lớp Football
+        Footballer f1=new Footballer("Quang Hai", 9, 23, true);
+        Footballer f2=new Footballer("Van Quyet", 12, 21, true);
+        Footballer f3=new Footballer("Hoang Vu Samson", 18, 11, false);
+        moreGoal(f1, f2);
+        moreGoal(f2, f3);
+        f1.nationalPlayer();
+        f2.nationalPlayer();
+        f3.nationalPlayer();
+        f1.performanceScore();
+        f2.performanceScore();
+        f3.performanceScore();
+        
+        //Lớp HinhThangCan
+        HinhThangCan hinh1=new HinhThangCan(4, 4, 8);
+        System.out.println("Canh ben cua hinh la: "+ hinh1.canhBen()+"\n");
+        System.out.println("Dien tich hinh la: "+hinh1.dienTich()+"\n");
+        System.out.println("Hinh co phai la hinh chu nhat? "+hinh1.hinhChuNhat()+"\n");
+    }
 }
 
 //TODO: khai báo 3 class tương ứng với 3 đối tượng thực tế ở dưới
+class HinhThangCan{
+    private double canhDay1,canhDay2,chieuCao;
+
+    public double getCanhDay1() {
+        return canhDay1;
+    }
+
+    public void setCanhDay1(double canhDay1) {
+        this.canhDay1 = canhDay1;
+    }
+
+    public double getCanhDay2() {
+        return canhDay2;
+    }
+
+    public void setCanhDay2(double canhDay2) {
+        this.canhDay2 = canhDay2;
+    }
+
+    public double getChieuCao() {
+        return chieuCao;
+    }
+
+    public void setChieuCao(double chieuCao) {
+        this.chieuCao = chieuCao;
+    }
+
+    public HinhThangCan(double canhDay1, double canhDay2, double chieuCao) {
+        this.canhDay1 = canhDay1;
+        this.canhDay2 = canhDay2;
+        this.chieuCao = chieuCao;
+    }
+    
+    public double canhBen(){
+        double side=sqrt(getChieuCao()*getChieuCao()+abs(getCanhDay1()-getCanhDay2())*abs(getCanhDay1()-getCanhDay2())*0.25);
+        return side;
+    }
+    public double dienTich(){
+        double S=(getCanhDay1()+getCanhDay2())*getChieuCao()*0.5;
+        return S;
+    }
+    public boolean hinhChuNhat(){
+        return getCanhDay1()==(getCanhDay2());
+    }
+    
+}
 class Teacher {
     private String name,faculty,email;
     private double salary, teachHour;
@@ -68,15 +147,6 @@ class Teacher {
         this.salary = salary;
         this.teachHour = teachHour;
     }
-    
-    public static void main(String[] args) {
-        Teacher t1=new Teacher("Le Khoi", "CNTT", "khoiln@vnu.edu.vn", 10000000, 18);
-        Teacher t2=new Teacher("Pham Huong", "DTVT", "phamhuong@vnu.edu.vn",9500000, 20);
-        t1.getInfo();
-        t2.getInfo();
-        System.out.println("Giao vien "+t1.getName()+" co thu nhap la: "+t1.earn()+"\n");
-        System.out.println("Giao vien "+t1.getName()+" va "+t2.getName()+" cung khoa khong? "+sameFaculty(t1, t2)+"\n");
-    }
 }
 class Footballer{
     private String name;
@@ -133,17 +203,5 @@ class Footballer{
         DecimalFormat df=new DecimalFormat("0.00");
         System.out.println(getName()+" co hieu suat ghi "+df.format(x)+" ban/tran\n");
     }
-    public static void main(String[] args) {
-        Footballer f1=new Footballer("Quang Hai", 9, 23, true);
-        Footballer f2=new Footballer("Van Quyet", 12, 21, true);
-        Footballer f3=new Footballer("Hoang Vu Samson", 18, 11, false);
-        moreGoal(f1, f2);
-        moreGoal(f2, f3);
-        f1.nationalPlayer();
-        f2.nationalPlayer();
-        f3.nationalPlayer();
-        f1.performanceScore();
-        f2.performanceScore();
-        f3.performanceScore();
-    }
 }
+

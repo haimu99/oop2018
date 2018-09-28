@@ -53,16 +53,30 @@ public class Fraction {
         this.numerator=this.numerator/a;
         this.denomianator=this.denomianator/a;
     }
-    public boolean equals(Fraction other){
-       Fraction hieu=new Fraction(1,1);
-       hieu=this.subtract(other);
-       return (hieu.numerator/hieu.denomianator)>=0;
+
+    public boolean equals(Object obj){
+        Fraction hieu=new Fraction(1, 1);
+        if (obj instanceof Fraction){
+            Fraction other=(Fraction) obj;
+            if (this.denomianator==0||other.denomianator==0) return false;
+            hieu=this.subtract(other);
+            return hieu.numerator==0;
+        }
+        else return false;
     }
     public static void main(String[] args) {
-        Fraction a=new Fraction(5,13);
-        Fraction b=new Fraction(5,14);
-        a = a.add(b);
-        System.out.println(a.numerator+"/"+a.denomianator);
+        Fraction a=new Fraction(2,3);
+        Fraction b=new Fraction(4,6);
+        Fraction c=new Fraction(1,1);
+        c=a.add(b);
+        System.out.println(c.numerator+"/"+c.denomianator);
+        c= a.subtract(b);
+        System.out.println(c.numerator+"/"+c.denomianator);
+        c=a.multiply(b);
+        System.out.println(c.numerator+"/"+c.denomianator);
+        c=a.divide(b);
+        System.out.println(c.numerator+"/"+c.denomianator);
+  
         System.out.println(a.equals(b));
     }
 }
