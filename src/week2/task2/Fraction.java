@@ -61,8 +61,9 @@ public class Fraction {
     public static void main(String[] args) {
         Fraction a=new Fraction(5,13);
         Fraction b=new Fraction(5,14);
-        a = a.add(b);
-        System.out.println(a.numerator+"/"+a.denomianator);
+        Fraction c=new Fraction(1,1);
+        c = a.add(b);
+        System.out.println(c.numerator+"/"+c.denomianator);
         System.out.println(a.equals(b));
     }
 }
