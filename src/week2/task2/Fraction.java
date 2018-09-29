@@ -65,7 +65,6 @@ public class Fraction {
         else return false;
     }
     public static void main(String[] args) {
-<<<<<<< HEAD
         Fraction a=new Fraction(2,3);
         Fraction b=new Fraction(4,6);
         Fraction c=new Fraction(1,1);
@@ -77,14 +76,6 @@ public class Fraction {
         System.out.println(c.numerator+"/"+c.denomianator);
         c=a.divide(b);
         System.out.println(c.numerator+"/"+c.denomianator);
-  
-=======
-        Fraction a=new Fraction(5,13);
-        Fraction b=new Fraction(5,14);
-        Fraction c=new Fraction(1,1);
-        c = a.add(b);
-        System.out.println(c.numerator+"/"+c.denomianator);
->>>>>>> 3c8ac0609b64a42418b2245d532e3b64df5b18b0
         System.out.println(a.equals(b));
     }
 }

@@ -203,5 +203,8 @@ class Footballer{
         DecimalFormat df=new DecimalFormat("0.00");
         System.out.println(getName()+" co hieu suat ghi "+df.format(x)+" ban/tran\n");
     }
+    public static void main(String[] args) {
+        
+    }
 }
 
