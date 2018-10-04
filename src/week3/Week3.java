@@ -1,7 +1,5 @@
 package week3;
 
-import java.util.Scanner;
-
 public class Week3 {
 
     public static int max(int m, int n) {
@@ -33,15 +31,5 @@ public class Week3 {
         else if(bmi>=18.5 && bmi<23) return "Bình thường";
         else if(bmi>=23 && bmi<25) return "Thừa cân";
         else return "Béo phì";
-    }
-    public static void main(String[] args) {
-        int[] a = new int[5];
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Nhập số");
-        for (int i=0;i<a.length;i++){
-            a[i]=sc.nextInt();
-        }
-        System.out.println(minOfArray(a));
-        System.out.println(calculateBMI(80, 1.78));
     }
 }

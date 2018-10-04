@@ -43,47 +43,37 @@ public class Week3Test {
     @Test
     public void testMax1() {
         System.out.println("test max1");
-        int m = -5;
-        int n = -3;
-        int expResult = -3;
-        int result = Week3.max(m, n);
-        assertEquals(expResult, result);
+        assertEquals(-3, Week3.max(-5, -3));
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     @Test
     public void testMax2() {
         System.out.println("test max2");
-        int m = -5;
-        int n = 0;
-        int expResult = 0;
-        int result = Week3.max(m, n);
-        assertEquals(expResult, result);
+        assertEquals(0, Week3.max(0,-5));
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     @Test
-    public void testMax3() {
+    public void testMax3(){
         System.out.println("test max3");
-        int m = -5;
-        int n = 7;
-        int expResult = 7;
-        int result = Week3.max(m, n);
-        assertEquals(expResult, result);
+        assertEquals(7, Week3.max(-5, 7));
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     @Test
     public void testMax4() {
         System.out.println("test max4");
-        int m = 0;
-        int n = 4;
-        int expResult =4;
-        int result = Week3.max(m, n);
-        assertEquals(expResult, result);
+        assertEquals(4, Week3.max(0, 4));
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     @Test
     public void testMax5() {
         System.out.println("test max5");
-        int m = 3;
-        int n = 9;
-        int expResult = 9;
-        int result = Week3.max(m, n);
-        assertEquals(expResult, result);
+        assertEquals(9, Week3.max(9, 3));
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     /**
      * Test of minOfArray method, of class Week3.
@@ -98,6 +88,8 @@ public class Week3Test {
         int expResult = -20;
         int result = Week3.minOfArray(array);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype."); 
     }
     @Test
     public void testMinOfArray2() {
@@ -109,6 +101,8 @@ public class Week3Test {
         int expResult = -10;
         int result = Week3.minOfArray(array);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     @Test
     public void testMinOfArray3() {
@@ -120,6 +114,8 @@ public class Week3Test {
         int expResult = -3;
         int result = Week3.minOfArray(array);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
 @Test
     public void testMinOfArray4() {
@@ -131,6 +127,8 @@ public class Week3Test {
         int expResult = 0;
         int result = Week3.minOfArray(array);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }   
     @Test
     public void testMinOfArray5() {
@@ -142,18 +140,66 @@ public class Week3Test {
         int expResult = 5;
         int result = Week3.minOfArray(array);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     /**
      * Test of calculateBMI method, of class Week3.
      */
     @Test
-    public void testCalculateBMI() {
-        System.out.println("calculateBMI");
+    public void testCalculateBMI1() {
+        System.out.println("calculateBMI1");
         double weight = 80;
         double height = 1.78;
         String expResult = "Béo phì";
         String result = Week3.calculateBMI(weight, height);
         assertEquals(expResult, result);
-    }
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }    
+    @Test
+    public void testCalculateBMI2() {
+        System.out.println("calculateBMI2");
+        double weight = 70;
+        double height = 1.7;
+        String expResult = "Thừa cân";
+        String result = Week3.calculateBMI(weight, height);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }    
+    @Test
+    public void testCalculateBMI3() {
+        System.out.println("calculateBMI3");
+        double weight = 55;
+        double height = 1.7;
+        String expResult = "Bình thường";
+        String result = Week3.calculateBMI(weight, height);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }    
+    @Test
+    public void testCalculateBMI4() {
+        System.out.println("calculateBMI4");
+        double weight = 52;
+        double height = 1.7;
+        String expResult = "Thiếu cân";
+        String result = Week3.calculateBMI(weight, height);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }    
+    @Test
+    public void testCalculateBMI5() {
+        System.out.println("calculateBMI5");
+        double weight = 70;
+        double height = 1.7;
+        String expResult = "Thừa cân";
+        String result = Week3.calculateBMI(weight, height);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }    
     
 }
