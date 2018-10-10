@@ -1,9 +1,4 @@
 package week3;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 20ce1773724a17344a6bd6f0a4183c57dcde23a7
 public class Week3 {
 
     public static int max(int m, int n) {
