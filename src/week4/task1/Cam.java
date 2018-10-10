@@ -1,38 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package week4.task1;
 
-/**
- *
- * @author Minh1082QN
- */
 public class Cam extends HoaQua{
-    private int gia;
-    private double soLuong;
+	private int giaCam;
+    private double soLuongCam;
 
-    public int getGia() {
-        return gia;
+    public int getGiaCam() {
+        return giaCam;
     }
 
-    public void setGia(int gia) {
-        this.gia = gia;
+    public void setGiaCam(int giaCam) {
+        this.giaCam = giaCam;
     }
 
-    public double getSoLuong() {
-        return soLuong;
+    public double getSoLuongCam() {
+        return soLuongCam;
     }
 
-    public void setSoLuong(double soLuong) {
-        this.soLuong = soLuong;
+    public void setSoLuongCam(double soLuongCam) {
+        this.soLuongCam = soLuongCam;
     }
 
-    public Cam(int gia, double soLuong, String loaiQua, String vi, boolean coLoi) {
-        super(loaiQua, vi, coLoi);
-        this.gia = gia;
-        this.soLuong = soLuong;
-    }
-    
+	public Cam(String vi, boolean coLoi, int giaCam, double soLuongCam) {
+		super(vi, coLoi);
+		this.giaCam = giaCam;
+		this.soLuongCam = soLuongCam;
+	}    
+	public void getInfo() {
+		System.out.println("Gia cam: "+getGiaCam()+" d/kg\n");
+		System.out.println("So luong cam: "+getSoLuongCam()+" kg\n");
+	}
+	public double giaTriCam()
+	{
+		return getGiaCam()*getSoLuongCam();
+	}
 }
