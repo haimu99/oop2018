@@ -25,10 +25,12 @@ public class Cam extends HoaQua{
 		this.giaCam = giaCam;
 		this.soLuongCam = soLuongCam;
 	}    
+	// in thong tin cam
 	public void getInfo() {
 		System.out.println("Gia cam: "+getGiaCam()+" d/kg\n");
 		System.out.println("So luong cam: "+getSoLuongCam()+" kg\n");
 	}
+	// tong gia tri so cam dang co
 	public double giaTriCam()
 	{
 		return getGiaCam()*getSoLuongCam();

@@ -2,6 +2,7 @@ package week4.task2;
 
 public class Circle extends Shape{
 	private double radius=1;
+	// khai bao so pi
 	final double pi=3.14;
 
 	public double getRadius() {
@@ -22,9 +23,11 @@ public class Circle extends Shape{
 		super(color, filled);
 		this.radius = radius;
 	}
+	// tinh dien tich hinh tron
 	public double getArea() {
 		return pi*getRadius()*getRadius();
 	}
+	// chu vi hinh tron
 	public double getPerimeter() {
 		return 2*pi*getRadius();
 	}

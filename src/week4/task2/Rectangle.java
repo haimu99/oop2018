@@ -34,9 +34,11 @@ public class Rectangle extends Shape{
 		this.width = width;
 		this.length = length;
 	}
+	// dien tich hcn
 	public double getArea() {
 		return getLength()*getWidth();
 	}
+	// chu vi hcn
 	public double getPerimeter() {
 		return 2*(getLength()+getWidth());
 	}

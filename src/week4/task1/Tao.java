@@ -20,10 +20,12 @@ public class Tao extends HoaQua{
 		this.giaTao = giaTao;
 		this.soLuongTao = soLuongTao;
 	}
+	//in thong tin tao
 	public void getInfo() {
 		System.out.println("Gia tao: "+getGiaTao()+"d/kg\n");
 		System.out.println("So luong tao: "+getSoLuongTao()+"kg\n");
 	}
+	//tong gia tri so tao dang co
 	public double giaTriTao() {
 		return getGiaTao()*getSoLuongTao();
 	}

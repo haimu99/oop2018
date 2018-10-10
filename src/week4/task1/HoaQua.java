@@ -37,10 +37,11 @@ public class HoaQua {
 	}
 
 	public void getInfo() {
+		//in thong tin hoa qua
 		System.out.println("Qua co vi: " + getVi() + "\n");
 		System.out.println("Qua co loi hay khong: " + isCoLoi() + "\n");
 	}
-
+	// 2 hoa qua co cung vi khong?
 	public boolean equalsTaste(HoaQua h1) {
 		return this.getVi().equals(h1.getVi());
 	}

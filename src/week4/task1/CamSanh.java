@@ -21,10 +21,12 @@ public class CamSanh extends Cam{
 		this.xuatXuCamSanh = xuatXuCamSanh;
 		this.mauCamSanh = mauCamSanh;
 	}
+	// in thong in cam sanh
 	public void getInfo() {
 		System.out.println("Xuat xu cam sanh: "+getXuatXuCamSanh()+"\n");
 		System.out.println("Mau cam sanh: "+getMauCamSanh()+"\n");
 	}
+	//2 loai cam sanh co cung mau ko?
 	public boolean cungMauCamSanh(CamSanh qua1) {
 		return this.getMauCamSanh().equals(qua1.getMauCamSanh());
 	}

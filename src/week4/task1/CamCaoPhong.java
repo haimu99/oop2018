@@ -20,10 +20,12 @@ public class CamCaoPhong extends Cam {
 		this.xuatXuCamCP = xuatXuCamCP;
 		this.mauCamCP = mauCamCP;
 	}
+	// in thong in cam cao phong
 	public void getInfo() {
 		System.out.println("Xuat xu cam cao phong: "+getXuatXuCamCP()+"\n");
 		System.out.println("Mau cam cao phong: "+getMauCamCP()+"\n");
 	}
+	//2 loai cam cao phong co cung mau ko?
 	public boolean cungMauCamCP(CamCaoPhong qua1) {
 		return this.getMauCamCP().equals(qua1.getMauCamCP());
 	}
