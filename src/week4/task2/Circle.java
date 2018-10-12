@@ -3,7 +3,7 @@ package week4.task2;
 public class Circle extends Shape{
 	private double radius=1;
 	// khai bao so pi
-	final double pi=3.14;
+	public final double pi=3.14;
 
 	public double getRadius() {
 		return radius;
