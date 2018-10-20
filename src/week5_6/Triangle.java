@@ -1,52 +1,46 @@
 package week5_6;
 
 public class Triangle extends Shape {
-    private Point a = new Point(),b = new Point(),c = new Point() ;
-    public Triangle(int x1,int y1, int x2,int y2, int x3,int y3,String color) {
-        super(x1,y1,color,"Triangle");
-        this.a.setToaDo(x1,y1);
-        this.b.setToaDo(x2,y2);
-        this.c.setToaDo(x3,y3);
-    }
+    private double radius;
+    
+    
+    public double getRadius() {
+		return radius;
+	}
 
-    public Triangle() {
-    }
 
-    public Point getA() {
-        return a;
-    }
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
 
-    public void setA(Point a) {
-        this.a = a;
-    }
 
-    public Point getB() {
-        return b;
-    }
+	public Triangle() {
+		super();
+	}
+    
 
-    public void setB(Point b) {
-        this.b = b;
-    }
+	public Triangle(int radius) {
+		super();
+		this.radius = radius;
+	}
+	
 
-    public Point getC() {
-        return c;
-    }
 
-    public void setC(Point c) {
-        this.c = c;
-    }
-    public boolean isSame(Shape y) {
+	public Triangle(int x, int y, String color, int radius) {
+		super(x, y, color, "Triangle");
+		this.radius = radius;
+	}
+
+
+	public boolean isSame(Shape y) {
         Triangle x =  (Triangle) y;
-        if (
-            (this.getA().isSameP(x.getA())) &&
-            (this.getB().isSameP(x.getB()))  && 
-            (this.getC().isSameP(x.getC()))
-           ) return true;
+        if ((this.getToaDo().isSameP(x.getToaDo())) && (this.getRadius()==x.getRadius()))
+        	return true;
         else return false;
     }
 
     public String toString() {
-        return "Triagle ";
+        return "Triangle ";
     }
 }
 

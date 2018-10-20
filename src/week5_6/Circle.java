@@ -2,9 +2,9 @@ package week5_6;
 
 public class Circle extends Shape{
     private double radius = 1.0 ;
-    public final static double PI = 3.1415;
+    public final static double PI = 3.14;
 
-    public Circle() {
+	public Circle() {
         super();
     }
 

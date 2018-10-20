@@ -45,12 +45,7 @@ public class Shape {
         this.toaDo.setX(xy.getX());
         this.toaDo.setY(xy.getY());
     }
-    public boolean isTriangle() {return false;}
-    public boolean isRectangle() {return false;}
-    public boolean isSquare() {return false;}
-    public boolean isCircle() {return false;}
-   
-    @Override
+
     public String toString() {
         return "Shape ";
     }

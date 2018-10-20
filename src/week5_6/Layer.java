@@ -12,18 +12,16 @@ public class Layer {
         this.Shapes = new ArrayList<>();
         this.Shapes.add(new Rectangle(0,0,10,5,"red"));
         this.Shapes.add(new Circle(5,6,8,"blue"));
-        this.Shapes.add(new Triangle(1,1,2,2,3,3, "green"));
+        this.Shapes.add(new Triangle(2, 4, "black", 2));
         this.Shapes.add(new Square(3,4,5, "yellow"));
         this.Shapes.add(new Rectangle(0,0,10,5,"red"));
-        this.Shapes.add(new Circle(5,6,8,"blue"));
-        this.Shapes.add(new Triangle(1,1,2,2,3,3, "green"));
-        this.Shapes.add(new Square(3,4,5, "yellow"));
+        this.Shapes.add(new Triangle(-1, -2, "pink", 2));
         
     }
     //xoa cac Triangle
 
     public void deleteTriangle() {
-        for (int i = this.Shapes.size() - 1; i >= 0; i--) {
+        for (int i =0;i<this.Shapes.size();i++) {
             if (this.Shapes.get(i) instanceof Triangle) {
                 this.Shapes.remove(i);
             }
@@ -32,7 +30,7 @@ public class Layer {
 
     //xoa cac Circle
     public void deleteCircle() {
-        for (int i = this.Shapes.size() - 1; i >= 0; i--) {
+        for (int i =0;i<this.Shapes.size();i++) {
             if (this.Shapes.get(i) instanceof Circle) {
                 this.Shapes.remove(i);
             }
@@ -40,11 +38,11 @@ public class Layer {
     }
 
     public String toString() {
-        String s = "";
+        String layer = "";
     
         for (int i = this.Shapes.size() - 1; i >= 0; i--) 
-                s+= this.Shapes.get(i).toString();
+                layer+= this.Shapes.get(i).toString();
           
-        return s;
+        return layer;
     }
 }

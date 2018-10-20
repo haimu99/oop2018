@@ -47,7 +47,8 @@ public class Rectangle extends Shape{
     // kiem tra 2 rectangle co trung nhau ko
     public boolean isSame(Shape y) {
         Rectangle x = (Rectangle) y;   
-        if ((this.getToaDo().isSameP(x.getToaDo())) && (this.getWidth()==x.getWidth()) && (this.getLength()==x.getLength()) ) return true;
+        if ((this.getToaDo().isSameP(x.getToaDo())) && (this.getWidth()==x.getWidth()) && (this.getLength()==x.getLength()) ) 
+        return true;
         else return false;
     }
 

@@ -10,9 +10,6 @@ public class Diagram {
         this.layers.add(new Layer());
         this.layers.add(new Layer());
         this.layers.add(new Layer());
-        this.layers.add(new Layer());
-        this.layers.add(new Layer());
-        this.layers.add(new Layer());
     }
     //xoa circle trong diagram
     public void deleteCircle() {
@@ -21,10 +18,10 @@ public class Diagram {
         }
     }
      public String toString() {
-        String ans = "";
+        String diagram = "";
         for (Layer layer : this.layers) {
-            ans = ans + layer.toString() + "\n";
+            diagram = diagram + layer.toString() + "\n";
         }
-        return ans;
+        return diagram;
     }
 }
