@@ -18,7 +18,8 @@ public class ExpressionTest {
 		}
 		catch(ArithmeticException x) {
 			System.out.println("Loi chia cho 0");
-			
+			System.out.println(x.toString());
+		
 		}
 	}
 }
