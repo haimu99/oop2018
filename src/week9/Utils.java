@@ -38,7 +38,7 @@ public class Utils {
 		File file = new File(path);
 		try {
 			FileWriter fw = new FileWriter(file, true);
-			fw.write("ghi de noi dung");
+			fw.write("ghi moi noi dung");
 			fw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -48,16 +48,21 @@ public class Utils {
 
 	public static File findFileByName(String folderPath, String filename) {
 		File folder = new File(folderPath);
-		if (folder.exists()) {
+		if (folder.isDirectory()) {
 			File file = new File(filename);
-			if (file.exists()) {
-				System.out.println("Da tim thay");
+			if (file.isFile()) {
+				System.out.println("da thay");
 				return file;
-			} else {
-				System.out.println("Khong tim thay file");
 			}
+			else {
+				System.out.println("Khong tim thay");
+				return null;
+			}
+
 		} else
+		{
 			System.out.println("Khong ton tai duong dan");
+		}
 		return null;
 	}
 
@@ -67,6 +72,6 @@ public class Utils {
 		System.out.println(readContentFromFile("test.txt"));
 		addContenttoFile("test.txt");
 		System.out.println(readContentFromFile("test.txt"));
-		findFileByName("F:\\GitHub\\oop2018", "testa.txt");
+		System.out.println(findFileByName("F:\\GitHub\\oop2018", "test.txt"));
 	}
 }
